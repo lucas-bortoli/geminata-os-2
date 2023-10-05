@@ -1,0 +1,13 @@
+diff --git a/node_modules/jsx-dom/types/index.d.ts b/node_modules/jsx-dom/types/index.d.ts
+index 23077b2..64f901f 100644
+--- a/node_modules/jsx-dom/types/index.d.ts
++++ b/node_modules/jsx-dom/types/index.d.ts
+@@ -57,7 +57,7 @@ interface AttrWithRef<T> extends Attributes {
+   ref?: Ref<T> | undefined
+ }
+ 
+-type ReactElement = HTMLElement | SVGElement
++export type ReactElement = HTMLElement
+ 
+ type DOMFactory<P extends DOMAttributes<T>, T extends Element> = (
+   props?: (AttrWithRef<T> & P) | null,
