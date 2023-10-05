@@ -1,0 +1,88 @@
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("Piboto-Regular.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url("Piboto-Bold.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: normal;
+  src: url("Piboto-Italic.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: bold;
+  src: url("Piboto-BoldItalic.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: lighter;
+  src: url("Piboto-Light.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: lighter;
+  src: url("Piboto-LightItalic.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: thin;
+  src: url("Piboto-Thin.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: thin;
+  src: url("Piboto-ThinItalic.ttf") format("truetype");
+  font-family: "Piboto";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: normal;
+  src: url("PibotoCondensed-Regular.ttf") format("truetype");
+  font-family: "Piboto Condensed";
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: bold;
+  src: url("PibotoCondensed-Bold.ttf") format("truetype");
+  font-family: "Piboto Condensed";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: normal;
+  src: url("PibotoCondensed-Italic.ttf") format("truetype");
+  font-family: "Piboto Condensed";
+}
+
+@font-face {
+  font-style: italic;
+  font-weight: bold;
+  src: url("PibotoCondensed-BoldItalic.ttf") format("truetype");
+  font-family: "Piboto Condensed";
+}
+
+:root {
+  --font-family-gui: "Piboto";
+  --font-family-gui-condensed: "Piboto Condensed";
+}
