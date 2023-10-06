@@ -4,7 +4,20 @@
 
 html, body {
   margin: 0;
+  background: url("./assets/maxresdefault.png") fixed;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+}
+
+.os-watermark {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vw;
+  opacity: 0.25;
+  filter: invert();
+  width: 30vw;
+  pointer-events: none;
+  user-select: none;
 }

@@ -5,11 +5,13 @@ import style from "./style.module.scss";
 
 type Div = HTMLDivElement;
 
-export class Window {
+export class Window extends EventTarget {
   private $win: Div;
   private attachedEvents: (() => void)[];
 
   constructor() {
+    super();
+
     this.$win = Window.createDomNode();
     this.attachedEvents = [];
 
@@ -48,7 +50,7 @@ export class Window {
     this.attachedEvents = [];
   }
 
-  static createDomNode() {
+  private static createDomNode() {
     return (
       <div class={style.windowWrapper}>
         <div class={style.resizeBorder} />
