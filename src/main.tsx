@@ -4,3 +4,4 @@ import { Publish } from "./apps/Publish";
 new Taskbar();
 window["Publish"] = Publish;
 new Publish([]);
+new Publish([]);

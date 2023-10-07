@@ -7,9 +7,11 @@ export function attachZOrder($window: HTMLDivElement) {
 
   $window.addEventListener("mousedown", onFocus);
   $window.addEventListener("focusin", onFocus);
+  $window.addEventListener("touchstart", onFocus);
 
   return function detachZOrder() {
     $window.removeEventListener("mousedown", onFocus);
     $window.removeEventListener("focusin", onFocus);
+    $window.removeEventListener("touchstart", onFocus);
   };
 }
