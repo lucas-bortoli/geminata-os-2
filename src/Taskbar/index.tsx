@@ -1,16 +1,31 @@
+import StartMenu from "./StartMenu";
 import style from "./style.module.scss";
 
-export class Taskbar {
-  $node: HTMLDivElement;
-  $clock: HTMLSpanElement;
-  $clockTimer: number;
+export default class Taskbar {
+  readonly $node: HTMLDivElement;
+  readonly $clock: HTMLSpanElement;
+  readonly $clockTimer: number;
+  readonly $startButton: HTMLButtonElement;
+
+  readonly startMenu: StartMenu;
 
   constructor() {
     this.$node = Taskbar.createDomNode();
     this.$clock = this.$node.querySelector(`.${style.clock}`)!;
     this.$clockTimer = setInterval(this.updateClock.bind(this), 1000);
+    this.$startButton = this.$node.querySelector(`.${style.start}`)!;
+    this.startMenu = new StartMenu(this.$startButton);
 
     this.updateClock();
+
+    this.$startButton.addEventListener("click", (event) => {
+      if (event.target !== this.$startButton) {
+        return;
+      }
+
+      requestAnimationFrame(() => this.startMenu.show());
+    });
+
     document.body.appendChild(this.$node);
   }
 

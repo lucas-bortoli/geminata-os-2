@@ -1,5 +1,6 @@
 import { Window } from "../../Window";
 import { Application } from "../Application";
+import theme from "../../widgets.module.scss"
 
 @Application()
 export class Publish implements Application {
@@ -11,7 +12,9 @@ export class Publish implements Application {
 
   constructor(args: string[]) {
     this.mainWindow = new Window();
-    this.mainWindow.$content.appendChild(<h1>Hello World!</h1>);
+    this.mainWindow.$content.appendChild(<>
+      <button class={theme.button}>Hello</button>
+    </>);
   }
 
   async onExit(): Promise<void> {

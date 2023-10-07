@@ -16,6 +16,7 @@
 
   * {
     color: #ccc;
+    text-shadow: 0.1em 0.1em 0 #00000080;
   }
 
   button {
@@ -26,7 +27,6 @@
     font-weight: 100;
     font-size: 1em;
     font-family: inherit;
-    text-shadow: 0.1em 0.1em 0 #00000080;
 
     &:hover {
       filter: brightness(1.1);
@@ -38,6 +38,7 @@
   }
 
   .start {
+    position: relative;
     background: linear-gradient(#7c9535, #38541f);
   }
 }

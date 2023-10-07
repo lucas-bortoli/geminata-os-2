@@ -4,8 +4,10 @@
 
 html, body {
   margin: 0;
-  background: url("./assets/maxresdefault.png") fixed;
-  background-size: cover;
+  background: url("./assets/win95_mate.png") fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1d3a20;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -20,4 +22,8 @@ html, body {
   width: 30vw;
   pointer-events: none;
   user-select: none;
+}
+
+::selection {
+  background-color: #375a39;
 }

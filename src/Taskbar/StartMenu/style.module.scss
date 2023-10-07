@@ -1,0 +1,42 @@
+.startMenu {
+  display: none;
+  position: absolute;
+  // Position on bottom of Start button
+  top: 100%;
+  left: 0;
+  z-index: 9999;
+  margin: 0;
+  outline: none;
+  box-shadow: 4px 4px 3px -2px rgba(0,0,0,.5);
+  background: #3d3c38;
+  padding: 0;
+  width: 180px;
+  color: #ccc;
+  list-style: none;
+
+  * {
+    outline: none;
+  }
+
+  &[x-shown] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li:not(.separator) {
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+    text-align: start;
+
+    &:is(:hover, :focus) {
+      background: #38541f;
+    }
+  }
+
+  .separator {
+    margin: 0.2em 0;
+    background: #4e4d48;
+    height: 0.1em;
+    pointer-events: none;
+  }
+}

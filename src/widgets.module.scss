@@ -1,0 +1,167 @@
+@import url("./fonts/fonts.css");
+
+@font-face {
+  src: url("/fonts/Cantarell-Regular.otf") format("opentype");
+  font-family: OS_UI;
+}
+
+:root {
+  font-size: 14px;
+}
+
+//#region Estilos de <Input type="xyz" />
+.input {
+  transition: box-shadow 100ms ease-in-out;
+  border: 1px solid #b7b7b7;
+  border-radius: 0.5em;
+  background: #fff;
+  padding: 0.4em;
+  font-family: var(--font-family-gui);
+
+  &:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: #323232 dotted 1px;
+    outline-offset: -4px;
+    box-shadow: 0 1px 2px rgba(7, 83, 19, 0.5);
+    border: 1px solid #a9ccb2;
+  }
+}
+//#endregion
+
+//#region Botões
+.button {
+  transition: box-shadow 100ms ease-in-out;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #b7b7b7;
+  border-radius: 0.5em;
+  background: linear-gradient(#fff, #f1f1f1);
+  padding: 0.4em 1.4em;
+  font-family: var(--font-family-gui);
+  user-select: none;
+
+  &:hover {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  &:focus {
+    outline: #323232 dotted 1px;
+    outline-offset: -4px;
+    box-shadow: 0 1px 2px rgba(7, 83, 19, 0.5);
+    border: 1px solid #a9ccb2;
+  }
+
+  &:active {
+    background: linear-gradient(#e8e8e8, #f8f8f8);
+  }
+}
+//#endregion
+
+//#region Estilos de menus
+
+.menuBar {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background: #3d3c38;
+  padding: 0;
+  color: #ddd;
+  font-family: var(--font-family-gui);
+  list-style: none;
+  user-select: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+
+  & > .menuItem {
+    left: 0;
+    border-radius: 0.2em;
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  border: 1px solid #2e2e2e;
+  background: #3d3c38;
+  padding: 0;
+  list-style: none;
+
+  .menuItem {
+    min-width: 250px;
+  }
+
+  .menuItem:hover, .menuItem:focus {
+    border-color: #728b4a;
+    background: linear-gradient(#92B161, #7A9352);
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.menuItem {
+  position: relative;
+  outline: none;
+  border: 1px solid transparent;
+  background: #3d3c38;
+  padding: 0.2em 0.4em;
+  font-family: var(--font-family-gui);
+  user-select: none;
+
+  &:hover, &:focus {
+    border: 1px solid #2e2e2e;
+    background: linear-gradient(#535149, #3d3c38);
+  }
+}
+
+.menuItem:is(:hover, :focus-within, :focus, :active) > .menu {
+  display: block;
+  top: 100%;
+  left: -1px;
+}
+
+.menuItem:is(:hover, :focus-within, :focus, :active) > .menu .menu {
+  top: 0;
+  left: 100%;
+}
+
+.menuDivider {
+  margin: 0.2em 0;
+  background: #313131;
+  width: 100%;
+  height: 1px;
+}
+
+//#endregion
+
+//#region Status bar
+.statusBar {
+  display: flex;
+  margin: 0;
+  border-top: 1px solid #c9c6c3;
+  background: #f2f1f0;
+  padding: 0;
+  font-family: var(--font-family-gui);
+  list-style: none;
+  user-select: none;
+
+  .statusBarItem {
+    padding: 0.2em 0.4em;
+  }
+}
+
+//#endregion
+
+//#region Link
+
+.link, link:visited {
+  color: #38541F;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #7C9535;
+}
+
+//#endif
