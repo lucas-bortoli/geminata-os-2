@@ -83,6 +83,6 @@
 }
 
 :root {
-  --font-family-gui: "Piboto";
-  --font-family-gui-condensed: "Piboto Condensed";
+  --font-family-gui: Helvetica;
+  --font-family-gui-condensed: Helvetica;
 }

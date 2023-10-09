@@ -1,3 +1,4 @@
+import { TSearch } from "../../apps/TorrSearch/Application";
 import style from "./style.module.scss";
 
 export default class StartMenu {
@@ -18,7 +19,7 @@ export default class StartMenu {
   show() {
     this.removeFromDom();
 
-    this.$element = StartMenu.createDomNode();
+    this.$element = this.createDomNode();
 
     this.$element.toggleAttribute("x-shown");
     this.$parent.appendChild(this.$element);
@@ -43,11 +44,17 @@ export default class StartMenu {
     this.$element = null;
   }
 
-  private static createDomNode() {
+  private launchApp() {
+    new TSearch([]);
+
+    this.removeFromDom();
+  }
+
+  private createDomNode() {
     return (
       <ul role="menu" className={style.startMenu}>
         <li tabIndex={0}>Publisher</li>
-        <li tabIndex={0}>Writer</li>
+        <li tabIndex={0} onClick={() => this.launchApp()}>TSearch</li>
         <li aria-hidden className={style.separator}></li>
         <li tabIndex={0}>Calculator</li>
       </ul>
