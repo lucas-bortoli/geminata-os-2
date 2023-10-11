@@ -1,3 +1,4 @@
+import { BauApp } from "../../apps/Bau/Application";
 import { TSearch } from "../../apps/TorrSearch/Application";
 import style from "./style.module.scss";
 
@@ -44,8 +45,12 @@ export default class StartMenu {
     this.$element = null;
   }
 
-  private launchApp() {
-    new TSearch([]);
+  private launchApp(app: "bau" | "tsearch") {
+    if (app === "bau") {
+      new BauApp([]);
+    } else if (app === "tsearch") {
+      new TSearch([]);
+    }
 
     this.removeFromDom();
   }
@@ -53,8 +58,8 @@ export default class StartMenu {
   private createDomNode() {
     return (
       <ul role="menu" className={style.startMenu}>
-        <li tabIndex={0}>Publisher</li>
-        <li tabIndex={0} onClick={() => this.launchApp()}>TSearch</li>
+        <li tabIndex={0} onClick={() => this.launchApp("bau")}>Baú</li>
+        <li tabIndex={0} onClick={() => this.launchApp("tsearch")}>TSearch</li>
         <li aria-hidden className={style.separator}></li>
         <li tabIndex={0}>Calculator</li>
       </ul>

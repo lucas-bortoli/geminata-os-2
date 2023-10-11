@@ -1,7 +1,10 @@
 import Taskbar from "./Taskbar";
 import "./style.css";
-import { Publish } from "./apps/Publish";
 import { TSearch } from "./apps/TorrSearch/Application";
-new Taskbar();
 
+import "./FileSystem";
+import { BauApp } from "./apps/Bau/Application";
+
+new Taskbar();
 new TSearch([]);
+new BauApp([]);
