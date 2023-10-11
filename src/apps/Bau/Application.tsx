@@ -5,6 +5,9 @@ import { Application } from "../Application";
 //@ts-expect-error "unused import", React is used for JSX compilation
 import React from "preact/compat";
 
+import widgets from "../../Widgets/widgets.module.scss";
+import { Menu, MenuBar, MenuDivider, MenuItem } from "../../Widgets/MenuBar";
+
 @Application()
 export class BauApp implements Application {
   static appId = "com.lucas-bortoli.geminata.bau";
@@ -17,10 +20,24 @@ export class BauApp implements Application {
     this.mainWindow = new Window();
     this.mainWindow.title = "Baú";
 
-    console.log(this.mainWindow.$content)
+    render(this.createReactTree(), this.mainWindow.$content);
+  }
 
-    render(<h1>OK</h1>,
-      this.mainWindow.$content
+  private createReactTree() {
+    return (
+      <div>
+        <MenuBar>
+          <MenuItem label="Arquivo">
+            <Menu>
+              <MenuItem label="Abrir" />
+              <MenuItem label="Salvar" />
+              <MenuDivider />
+              <MenuItem label="Sair" />
+            </Menu>
+          </MenuItem>
+          <MenuItem label="Ver"></MenuItem>
+        </MenuBar>
+      </div>
     );
   }
 

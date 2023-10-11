@@ -2,7 +2,7 @@ import { render } from "preact";
 import { Window } from "../../Window";
 import { Application } from "../Application";
 
-import UI from "../../widgets.module.scss";
+import UI from "../../Widgets/widgets.module.scss";
 import style from "./style.module.scss";
 
 //@ts-expect-error "unused import", React is used for JSX compilation
