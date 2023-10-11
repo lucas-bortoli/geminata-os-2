@@ -7,6 +7,7 @@ import React from "preact/compat";
 
 import widgets from "../../Widgets/widgets.module.scss";
 import { Menu, MenuBar, MenuDivider, MenuItem } from "../../Widgets/MenuBar";
+import { Button } from "../../Widgets/Button";
 
 @Application()
 export class BauApp implements Application {
@@ -37,6 +38,7 @@ export class BauApp implements Application {
           </MenuItem>
           <MenuItem label="Ver"></MenuItem>
         </MenuBar>
+        <Button>Nice</Button>
       </div>
     );
   }
